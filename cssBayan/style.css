@@ -46,37 +46,44 @@ img {
 }
 
 .page__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
   border-top: 0.25em solid black;
-  align-items: center;
   cursor: pointer;
 }
 
 .page__label {
-  width: 80%;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.page__text {
-  font-size: 1.8rem;
-  text-transform: uppercase;
+  flex-direction: column;
   cursor: pointer;
 }
 
+.page__label:active .page__text {
+  opacity: .5;
+}
+
+.page__text {
+  display: block;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 .page__input {
+  position: absolute;
+  top: 2em;
+  right: 2em;
   display: none;
   appearance: none;
-  width: 2em;
-  height: 2em;
+  width: 3em;
+  height: 3em;
   margin: 0;
   background-image: url("./img/icons/close.svg");
-  background-size: 2em;
+  background-size: 3em;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -88,8 +95,13 @@ img {
 }
 
 .page__image {
+  align-self: center;
   width: 0;
   transition: all 1s;
+}
+
+.page__input[type="radio"]:checked + .page__image {
+  width: 70%;
 }
 
 @media (hover: hover) {
