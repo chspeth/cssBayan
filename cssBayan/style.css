@@ -113,6 +113,12 @@ img {
   }
 }
 
+@media (max-width: 1000px) {
+  .page__list .page__input {
+    display: block;
+  }
+}
+
 @media (max-width: 820px) {
   .page__header {
     font-size: 4rem;
@@ -125,8 +131,22 @@ img {
   .page__text {
     font-size: 2rem;
   }
+}
 
-  .page__list .page__input {
-    display: block;
+@media (max-width: 370px) {
+  .page__header {
+    font-size: 2.5rem;
+  }
+
+  .page__item {
+    padding: 1rem 0.5rem;
+  }
+
+  .page__text {
+    font-size: 1.4rem;
+  }
+
+  .page__image {
+    width: 100%;
   }
 }
