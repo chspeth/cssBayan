@@ -69,6 +69,35 @@ img {
   cursor: pointer;
 }
 
-.page__image {
+.page__input {
   display: none;
+  appearance: none;
+  width: 2em;
+  height: 2em;
+  margin: 0;
+  background-image: url("./img/icons/close.svg");
+  background-size: 2em;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.page__input[type="radio"]:checked {
+  background-image: url("./img/icons/check.svg");
+}
+
+.page__image {
+  width: 0;
+  transition: all 1s;
+}
+
+@media (hover: hover) {
+  .page__list:hover .page__input {
+    display: block;
+  }
+
+  .page__item:hover .page__image {
+    width: 70%;
+  }
 }
